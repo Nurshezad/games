@@ -1,0 +1,65 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0f8f0; /* Soft background color */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#game-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #a8d5ba; /* Light mint green border */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#bunny-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Fixed height for game area */
+    border: 2px dashed #3a6e41; /* Forest green dashed border */
+    margin: 20px 0;
+    background-color: #e6ffe6; /* Light green background for game area */
+    overflow: hidden; /* Ensure bunny doesn't overflow */
+}
+
+#bunny {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ffcccb; /* Light pink bunny */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#bunny:hover {
+    background-color: #ff99a1; /* Slightly darker pink on hover */
+}
+
+#score, #timer {
+    font-size: 24px;
+    color: #3a6e41; /* Forest green */
+}
+
+h1 {
+    color: #66ff66; /* Bright green */
+}
+
+@keyframes moveBunny {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(calc(100vw - 100px), calc(100vh - 200px)); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes jumpBunny {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+
